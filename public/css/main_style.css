@@ -1,0 +1,134 @@
+
+.main-section{
+    background-color:var(--white-solido);
+    padding-bottom: 80px;
+}
+
+.prod-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(304px, 1fr));
+    justify-items: center;
+    row-gap: 3em;
+    column-gap: 5vw;
+    margin-left: 20.4vw;
+    margin-right: 20.4vw;
+}
+
+.prod-container .card{
+    position: relative;
+    display: grid;
+    justify-items: center;
+    background: var(--black-solido);
+    border-top-left-radius: 0.625em;
+    border-top-right-radius: 0.625em;
+    border-bottom-left-radius: 1.875em;
+    border-bottom-right-radius: 1.875em;
+    border: 1px solid var(--black-solido);
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
+    transition: all 0.5s ease;
+    z-index: 0;
+}
+
+.foto-card{
+    height: 19em;
+    border-top-left-radius: 0.625em;
+    border-top-right-radius: 0.625em;
+    border: 1px solid var(--black-solido);
+}
+.nombre-card{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    width: 12em;
+    text-align: center;
+    padding-top: 10px;
+}
+.precio-card{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.card-cart{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: url("https://i.imgur.com/1hRgIQ7.png") no-repeat;
+    background-size: 100%;
+    height: 3.1em;
+    width: 3.1em;
+    display:inline-block;
+    border: none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    margin-left: 4px;
+    justify-self: end;
+    transition: all 0.1s ease;
+}
+.card-cart:active{
+    transform: scale(1.1);
+}
+.producto-link{
+    text-decoration: none;
+    color: var(--white-solido);
+}
+.sort-div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 20.4vw;
+    margin-right: 20.4vw;
+    padding-top: 5em;
+    padding-bottom: 0.7em;
+    align-items: center;
+}
+
+.inside-sort-div{
+    grid-column: 1/2;
+    display: flex;
+    align-items: center;
+}
+
+.sort-check{
+    display: none;
+}
+
+.sort-check + .label-sort
+{
+    background: url("https://i.imgur.com/73GrcPo.png") no-repeat;
+    background-size: 100%;
+    height: 1.5em;
+    width: 1.5em;
+    display:inline-block;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.sort-check:checked + .label-sort
+{
+    transform: rotateX(180deg);
+}
+
+.label-sort-texto{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    padding-left: 7px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.prod-container .card:hover{
+    transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 40px, 
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+@media screen and (max-width: 1153px) {
+    .prod-container{
+        margin: 0;
+    }
+}

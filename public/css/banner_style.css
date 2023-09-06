@@ -1,0 +1,102 @@
+.banner{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    overflow: hidden;
+}
+.banner-images{
+    display: flex;
+    width: 3360px;
+    height: auto;
+    padding: 0px 5px 0 5px;
+    background-color: var(--black-solido);
+    overflow: hidden;
+    margin-left: 0;
+    animation: slide 15s infinite alternate ease-in-out;
+}
+.banner-images ul{
+    position: relative;
+    display: flex;
+    width: 175%;
+    user-select: none;
+    pointer-events: none;
+}
+.banner-images li {
+    list-style: none;
+    width: 100%;
+}
+.banner-img{
+    width: 100%;
+    padding: 2px;
+}
+.banner-bottom-div{
+    width: 100%;
+    background-color: var(--black-solido);
+    color: var(--white-solido);
+    height: 7em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding: 0px 250px 0px 250px;
+    height: 130px;
+}
+.banner-h4 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 0;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+.banner-item-div, .banner-item-div1, .banner-item-div2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.banner-item-div, .banner-item-div1{
+    border-right: 1px solid var(--white-solido);
+}
+.banner-icon{
+    width: 2em;
+    height: 2em;
+    margin-bottom: 7px;
+    user-select: none;
+}
+.banner-p{
+    font-weight: 300;
+    font-size: 14px;
+    user-select: none;
+}
+
+@keyframes slide {
+    0% {margin-left: 0%;}
+    21% {margin-left: 0%;}
+
+    26% {margin-left: -25%;}
+    47% {margin-left: -25%;}
+
+    52% {margin-left: -50%;}
+    73% {margin-left: -50%;}
+
+    78% {margin-left: -75%;}
+    100% {margin-left: -75%;}
+}
+
+@media screen and (max-width: 1153px) {
+    .banner-bottom-div{
+        grid-template-columns: repeat(1, 1fr);
+        height: auto;
+        padding: 0px 0px 15px 0px;
+    }
+    .banner-item-div, .banner-item-div1{
+        border-right: none;
+        border-bottom: 1px solid var(--white-solido);
+        margin: 10px 0px 10px;
+        padding-bottom: 10px;
+    }
+}

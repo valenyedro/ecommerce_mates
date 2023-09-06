@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=PT+Sans&display=swap');
+
+.error-div{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-column: 1/4;
+}
+
+.error{
+    padding-bottom: 40px;
+}
+
+.error-h4{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 17px;
+}

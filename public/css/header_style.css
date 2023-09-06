@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&family=PT+Sans&display=swap');
+
+:root{
+    --green-primario: #BFD4B6;
+    --black-solido: #000;
+    --black-suave: #191919;
+    --white-solido: #fff;
+    --turquoise: #77EED8;
+    --purple: #9EABE4;
+    --cream: #FAF7F2;
+    --gray: #aaa;
+    --red-light: #EF9A9A;
+    --green-light: #97cc97;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header{
+    padding-top: 1px;
+    top: 0;
+    background-image: url('https://i.imgur.com/ADt30QM.png');
+}
+
+.buen-mate-h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 0;
+    background-color: var(--black-solido);
+    color: var(--white-solido);
+    height: 4.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.nav ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    justify-items: center;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.nav ul li a {
+    display: flex;
+    text-decoration: none;
+    color: var(--black-solido);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.prods {
+    grid-column: 3/4;
+}
+
+.instagram-header {
+    grid-column: 4/5;
+}
+
+.logo-li {
+    grid-column: 5/6;
+}
+
+.admin {
+    grid-column: 6/7;
+}
+
+.cart {
+    grid-column: 9/10;
+}
+
+.logo {
+    width: 4.8vw;
+}
+
+.search {
+    display: flex;
+    grid-column: 7/9;
+    align-items: center;
+}
+.button-search{
+    background: url("https://i.imgur.com/qgusorK.png") no-repeat;
+    background-size: 100%;
+    height: 2.6em;
+    width: 2.6em;
+    display:inline-block;
+    border: none;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    margin-left: 4px;
+}
+.input-search{
+    outline: none;
+    border: none;
+    color: var(--black-solido);
+    font-size: 15px;
+    width: 184px;
+    background: transparent;
+    overflow:visible;
+    padding: 3px 1px;
+}
+
+.button-deletesearch{
+    background: url("https://i.imgur.com/u7pi3NK.png") no-repeat;
+    background-size: 100%;
+    height: 1.6em;
+    width: 1.6em;
+    display:inline-block;
+    border: none;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    margin-top: 6.5px;
+    margin-left: 12px;
+}
+
+.search-div{
+    display: flex;
+    border-radius: 50px;
+    border: 1px solid var(--black-solido);
+    width: 265px;
+    transition: all 0.5s ease;
+}
+
+.search-div:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px, 
+    rgba(0, 0, 0, 0.12) 0px -6px 15px, 
+    rgba(0, 0, 0, 0.12) 0px 2px 3px, 
+    rgba(0, 0, 0, 0.17) 0px 6px 7px, 
+    rgba(0, 0, 0, 0.09) 0px -1.5px 2.5px;
+}
+
+.cart{
+    transition: all 0.5s ease;
+    position: relative;
+    width: 115px;
+}
+.button-cart{
+    background: url("https://i.imgur.com/ccFVXLZ.png") no-repeat;
+    background-size: 100%;
+    background-position: center;
+    height: 2.1em;
+    width: 2.1em;
+    display:inline-block;
+    border: none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    margin-left: 80px;
+    margin-top: 4px;
+}
+.cart-count{
+    background-color: red;
+    color: var(--white-solido);
+    border-radius: 50%;
+    font-size: 14px;
+    height: 17px;
+    width: 17px;
+    font-weight: 500;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+@media screen and (max-width: 1153px) {
+    .nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    .button-cart{
+        margin-left: 46px;
+        margin-top: 15px;
+    }
+    .cart-count{
+        right: 35px;
+        top: 10px;
+    }
+    .nav ul li a {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}

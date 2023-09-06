@@ -1,0 +1,156 @@
+#cart_sidebar{
+    position: fixed;
+    width: 450px;
+    height: 100%;
+    max-height: 100%;
+    top: 0;
+    right: -450px;
+    background-color: var(--white-solido);
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+#cart_sidebar.active{
+    right: 0px;
+    box-shadow: 5px 0px 70px -20px var(--black-solido);
+}
+
+.upper-sidebar{
+    display: flex;
+    padding: 15px 15px 15px 15px;
+    box-shadow: 15px 5px 30px -15px var(--black-solido);
+    align-items: center;
+}
+
+.exit-cart{
+    background: url("https://i.imgur.com/v1TVZ7t.png") no-repeat;
+    background-size: 100%;
+    background-position: center;
+    height: 1.1em;
+    width: 1.1em;
+    display:inline-block;
+    border: none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.sidebar-title{
+    margin: auto;
+    font-weight: 500;
+}
+
+.bottom-sidebar{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+    box-shadow: 15px 5px 25px -10px var(--black-solido);
+}
+.generate-order-sidebar{
+    width: 300px;
+    height: 50px;
+    cursor: pointer;
+    background-color: var(--black-suave);
+    color: var(--white-solido);
+    font-weight: 600;
+    border-radius: 5%;
+    filter: drop-shadow(2px 3px 2px var(--black-suave));
+}
+.generate-order-sidebar:active{
+    transform: translate(0.5%, 3%);
+}
+.subtotal-sidebar{
+    padding: 10px 0px 10px;
+    font-weight: 700;
+}
+
+.main-sidebar{
+    overflow-y: auto;
+    max-height: 83%;
+    display: grid;
+    justify-items: center;
+}
+.cart-item{
+    display: flex;
+    padding: 30px 8px 15px;
+    border-bottom: 1px solid var(--black-solido);
+}
+.cart-item--img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.cart-item--list{
+    list-style: none;
+    padding-left: 20px;
+}
+.cart-item--descrip, .cart-item--precio, .cart-item--cantidad{
+    padding-top: 3px;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 19px;
+    max-width: 230px;
+}
+.cart-item--buttons{
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+}
+.restar-producto{
+    background: url("https://i.imgur.com/yi2d4Sg.png") no-repeat;
+    background-size: 100%;
+    background-position: center;
+    height: 1.6em;
+    width: 1.6em;
+    border: none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.sumar-producto{
+    background: url("https://i.imgur.com/KX6zLV2.png") no-repeat;
+    background-size: 100%;
+    background-position: center;
+    height: 1.6em;
+    width: 1.6em;
+    border: none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.delete-producto{
+    background: url("https://i.imgur.com/8gm1iZe.png") no-repeat;
+    background-size: 100%;
+    background-position: center;
+    height: 1.6em;
+    width: 1.6em;
+    border: none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    margin-left: 190px;
+}
+
+.orden{
+    overflow: hidden;
+    margin: 20px 30px 20px 30px;
+    border: 1px solid var(--black-solido);
+    border-radius: 3%;
+    background-color: #FAF7F2;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 25%);
+    width: 315px;
+}
+.orden-id, .orden-cliente, .orden-productos, .orden-fecha{
+    border-bottom: 1px solid var(--black-solido);
+    margin: 5px 0px 5px;
+    padding: 5px 10px 5px 10px;
+}
+.orden-fecha{
+    border-bottom: 1px solid var(--black-solido);
+    margin: 5px 0px 0px;
+    padding: 5px 10px 5px 10px;
+}
+.orden-total{
+    text-align: center;
+    padding: 8px 10px 8px 10px;
+    margin: 1px;
+}
